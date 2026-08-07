@@ -1,33 +1,49 @@
-class Book{
-  late String title;
-  late String author;
-  late int pages;
+class Car{
+  late String brand;
+  late String category;
+  late String color;
+  int? _maxSpeed;
+
+  bool setMaxSpeed(int maxSpeed){
+    if(maxSpeed>0){
+      _maxSpeed = maxSpeed;
+      return true;
+    }
+    return false;
+  }
+  // using set keyword
+  set maxSpeed(int maxSpeed){
+     if(maxSpeed>0){
+      _maxSpeed = maxSpeed;
+    }
+  }
+  int? getMaxSpeed(){
+    return _maxSpeed;
+  }
+  // using get keyword
+  int? get maxSpeed{
+    return _maxSpeed;
+  }
+  
 
   void displayInfo(){
-    print('Title: $title');
-    print('Author: $author');
-    print('Pages: $pages');
+    print('Brand: $brand');
+    print('Category: $category');
+    print('Color: $color');
+    print('Max Speed: $_maxSpeed');
   }
 
-  Book({required this.title, required this.author, required this.pages});
-  Book.test(this.author);
+  Car({required this.brand, required this.category, required this.color});
+
+  Car.sport(this.brand){
+    color = 'Red';
+    category = 'Sport';
+  }
+
+
 }
 void main(){
-  Book b1 = Book(title: 'Dart Programming', author: 'Ahmed', pages: -300);
-  Book b2 = Book.test('Mohamed');
-  b1.displayInfo();
-  b2.displayInfo();
+  Car car1 = Car(brand: 'Honda', category: 'Sedan', color: 'Black');
+  car1._maxSpeed = -200;
+  car1.displayInfo();
 }
-
-void sum(int x1, int x2){
-
-}
-
-/*
-User
-- name
-- email
-- age
-
--displayInfo
-*/
