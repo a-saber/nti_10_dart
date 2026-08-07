@@ -46,4 +46,8 @@ void main(){
   Car car1 = Car(brand: 'Honda', category: 'Sedan', color: 'Black');
   car1._maxSpeed = -200;
   car1.displayInfo();
+  // test(name:'Ali');
 }
+
+
+void test(String name){}
