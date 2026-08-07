@@ -7,6 +7,7 @@
 void add (int x1, int x2, String op)
 {
   int sum = x1 + x2 ;
+  sum.abs();
   print('Sum: $sum');
 }
 void multipy({required int x1, int x2 = 1, required String op})
