@@ -1,35 +1,64 @@
-class Person{
-  String? name;
-  int? age;
+class Vehicle {
+  String brand;
+  String color;
 
-  Person( this.age, this.name,);
-  void displayInfo(){
-    print('Name: $name');
-    print('Age: $age');
+  Vehicle(this.brand, this.color);
+
+  void displayInfo() 
+  {
+    print('Brand: $brand');
+    print('Color: $color');
   }
 }
-
-class Student extends Person{
-  double? gpa;
-
-  // Student({required this.gpa}):super(30, 'Ali');
-  Student(super.age, super.name);
+class Car extends Vehicle {
+  String model;
+  Car( super.brand, super.color, {required this.model,});
 
   @override
-  void displayInfo(){
-    print('GPA: $gpa');
-    super.displayInfo();
-  }
+void displayInfo() {
+  super.displayInfo();
+  print('Model: $model');
+}
+}
 
+class CarA extends Car{
+  String? aType;
+  CarA(super.brand, super.color, {required super.model, this.aType});
+
+  @override
+  void displayInfo() {
+    super.displayInfo();
+    print('TypeA: $aType');
+  }
+}
+class Bus extends Vehicle{
+  String? type;
+  Bus(super.brand, super.color, {this.type});
+
+  @override
+  void displayInfo() {
+    super.displayInfo();
+    print('Type: $type');
+  }
 }
 
 void main(){
-  Person person1 = Person(30, 'ahmed');
-  person1.displayInfo();
 
-  print('-------------------');
+  Vehicle v1 = Vehicle("Honda", "Blue");
+  Car c1 = Car(model: 'Sedan', "Toyota", "Red");
+  Bus b1 = Bus("Nissan", "Black", type: "School Bus");
+  CarA ca1 = CarA("BMW", "White", model: "X5", aType: "Luxury");
+ 
+display(v1);
+print('-------------------');
+display(c1);
+print('-------------------');
+display(b1);
+print('-------------------');
+display(ca1);
 
-  Student student1 = Student(22, 'Ali');
-  student1.gpa = 3.5;
-  student1.displayInfo();
+}
+
+void display(Vehicle vehicle) {
+  vehicle.displayInfo();
 }
