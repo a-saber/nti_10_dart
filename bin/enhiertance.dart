@@ -1,3 +1,5 @@
+import 'dart:math';
+
 class Vehicle {
   String brand;
   String color;
@@ -57,6 +59,7 @@ display(b1);
 print('-------------------');
 display(ca1);
 
+print(pow(2,3));
 }
 
 void display(Vehicle vehicle) {
