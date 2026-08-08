@@ -62,3 +62,55 @@ display(ca1);
 void display(Vehicle vehicle) {
   vehicle.displayInfo();
 }
+
+/*
+Person
+- name
+- age
+- displayInfo()
+
+Student
+- name
+- age
+- university
+- displayInfo()
+
+Employee
+- name
+- age
+- salary
+- displayInfo()
+
+Manager
+- name
+- age
+- salary
+- department
+- displayInfo()
+
+Teacher
+- name
+- age
+- salary
+- subject
+
+-------------
+
+display(Person person) {
+  person.displayInfo();
+}
+
+main() {
+  Person p1 = Person("John", 25);
+  Student s1 = Student("Alice", 20, "Harvard");
+  Employee e1 = Employee("Bob", 30, 50000);
+  Manager m1 = Manager("Charlie", 35, 80000, "Sales");
+  Teacher t1 = Teacher("Dave", 40, 60000, "Math");
+
+  display(p1);
+  display(s1);
+  display(e1);
+  display(m1);
+  display(t1);
+}
+*/
