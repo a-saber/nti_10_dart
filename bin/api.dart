@@ -1,14 +1,26 @@
+
 import 'package:dio/dio.dart';
 
 void main()async{
   Dio dio = Dio();
   Map<String, dynamic> requestData = {
-    "username": "ahmed",
-    "password": "1234",
-    'image': await MultipartFile.fromFile('path/to/image.jpg'),
+    "username": 'ahmed01',
+    "password": '123456'
   };
-  // dio.post('https://test-api/register',data: requestData); // using JSON
-  // dio.post('https://test-api/register',data: FormData.fromMap(requestData)); // using FormData
+  var response = await dio.post(
+    "https://ntitodo-production-cddf.up.railway.app/api/login",
+    data: FormData.fromMap(requestData),
+    queryParameters: {
+      'lat': '30.1',
+      'lon': '31.1'
+    },
+    options: Options(
+      headers: {
+        'Authorization': 'Bearer '
+      }
+    )
 
-  dio.post('https://ntitodo-production-edbc.up.railway.app/api/register', data: FormData.fromMap(requestData));
+    );
+
+    print(response.toString());
 }
