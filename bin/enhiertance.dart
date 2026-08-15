@@ -1,5 +1,18 @@
 import 'dart:math';
 
+class User{
+  static String name = "Ali";
+  int age = 20;
+}
+
+void main(){
+
+  User u = User();
+  User.name = "Ahmed";
+  // User.age =  25;
+  u.age = 30;
+  
+}
 class Vehicle {
   String brand;
   String color;
@@ -44,23 +57,25 @@ class Bus extends Vehicle{
   }
 }
 
-void main(){
+// void main(){
 
-  Vehicle v1 = Vehicle("Honda", "Blue");
-  Car c1 = Car(model: 'Sedan', "Toyota", "Red");
-  Bus b1 = Bus("Nissan", "Black", type: "School Bus");
-  CarA ca1 = CarA("BMW", "White", model: "X5", aType: "Luxury");
  
-display(v1);
-print('-------------------');
-display(c1);
-print('-------------------');
-display(b1);
-print('-------------------');
-display(ca1);
 
-print(pow(2,3));
-}
+//   Vehicle v1 = Vehicle("Honda", "Blue");
+//   Car c1 = Car(model: 'Sedan', "Toyota", "Red");
+//   Bus b1 = Bus("Nissan", "Black", type: "School Bus");
+//   CarA ca1 = CarA("BMW", "White", model: "X5", aType: "Luxury");
+ 
+// display(v1);
+// print('-------------------');
+// display(c1);
+// print('-------------------');
+// display(b1);
+// print('-------------------');
+// display(ca1);
+
+// print(pow(2,3));
+// }
 
 void display(Vehicle vehicle) {
   vehicle.displayInfo();

@@ -1,0 +1,373 @@
+{
+  "info": {
+    "_postman_id": "72cb245c-cfd2-49d4-8094-9a228b83963c",
+    "name": "TODO",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "26797709"
+  },
+  "item": [
+    {
+      "name": "users",
+      "item": [
+        {
+          "name": "register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "username",
+                  "value": "ahmed-saber-001",
+                  "type": "text",
+                  "uuid": "62a03c67-5fd9-4645-972c-bf979736ba95"
+                },
+                {
+                  "key": "password",
+                  "value": "123456",
+                  "type": "text",
+                  "uuid": "305c2daf-3df4-49c4-bccc-2732414e4788"
+                },
+                {
+                  "key": "image",
+                  "description": "optional",
+                  "type": "file",
+                  "uuid": "ed5c1076-d6b9-4ca1-8840-b5fdd0eceb6b",
+                  "src": "/C:/Users/Saber/Downloads/GettyImages-1315607788 3 (3).png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_todo_url}}register",
+              "host": [
+                "{{base_todo_url}}register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "username",
+                  "value": "ahmedsaber",
+                  "type": "text",
+                  "uuid": "62a03c67-5fd9-4645-972c-bf979736ba95"
+                },
+                {
+                  "key": "password",
+                  "value": "123456",
+                  "type": "text",
+                  "uuid": "305c2daf-3df4-49c4-bccc-2732414e4788"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_todo_url}}login",
+              "host": [
+                "{{base_todo_url}}login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "change_password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTU2NTcwMSwianRpIjoiNDZjOWVhNDUtNzZiYy00MzQ3LTk3YTMtYjRiMTIxYmJlNGRkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzQxNTY1NzAxLCJjc3JmIjoiZWEwNzAwYjctNmJlZC00ZjE3LTkzOWQtZmJhZjFlMTE3ZTBkIiwiZXhwIjoxNzQxNTY2NjAxfQ.5wwxBwwMcyUsTBVPEn89CYyKKOqDS4MF-Fezc1jXlJA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "current_password",
+                  "value": "123456",
+                  "type": "text",
+                  "uuid": "62a03c67-5fd9-4645-972c-bf979736ba95"
+                },
+                {
+                  "key": "new_password",
+                  "value": "1234567",
+                  "type": "text",
+                  "uuid": "305c2daf-3df4-49c4-bccc-2732414e4788"
+                },
+                {
+                  "key": "new_password_confirm",
+                  "value": "1234567",
+                  "type": "text",
+                  "uuid": "c5906a66-d68e-4caa-b5db-c5e063c9e37a"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_pos_url}}change_password",
+              "host": [
+                "{{base_pos_url}}change_password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "refresh_token",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NDYwMTU0MCwianRpIjoiNWNiYzkwYzgtNTRlYi00YjRmLWEwYzAtODMyMGRhMTc4ZWNlIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOjMsIm5iZiI6MTc3NDYwMTU0MCwiY3NyZiI6IjNkODNjZGIxLTFkMjMtNGM4OS04NTFkLWZjOWZiZWI3YWYzNCIsImV4cCI6MTc3NzE5MzU0MH0.-wgPYwEaXbiSk9LgxhIBS4VzjswqmZ7Zicqs6tUB6Kg",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_todo_url}}refresh_token",
+              "host": [
+                "{{base_todo_url}}refresh_token"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update_profile",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTk2NjEwNSwianRpIjoiYjc4MzNjYmUtOGE1Mi00NmM3LThkYzktNGYxOGY3NjMwZWFiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MzYsIm5iZiI6MTc0MTk2NjEwNSwiY3NyZiI6IjIzZjZkMmYwLWRiN2MtNDg3NC1iYzM2LTE3NWI3OTIxYmYxMyIsImV4cCI6MTc0MTk2NzAwNX0.TxG7mgMQbCM4xx3QCidE9ApbOM5y-LwCzNYqnBjwf2s",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "username",
+                  "value": "ahmed saber abdo",
+                  "type": "text",
+                  "uuid": "62a03c67-5fd9-4645-972c-bf979736ba95"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "uuid": "ed5c1076-d6b9-4ca1-8840-b5fdd0eceb6b",
+                  "src": "/C:/Users/pc/Downloads/flutter_cubit_full.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_pos_url}}update_profile",
+              "host": [
+                "{{base_pos_url}}update_profile"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get_user_data",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NDYwMTUwNSwianRpIjoiOGIzOTJiZTQtYmU5Ny00Y2JmLTllZjUtNjk0ZTMxZDI5ZDVmIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOjMsIm5iZiI6MTc3NDYwMTUwNSwiY3NyZiI6IjM5NzQwODE2LWQ0YTktNDY0ZS04Yjk3LTZhOTZlOGJmMjk5MSIsImV4cCI6MTc3NzE5MzUwNX0.yA2w20OkcUECh9N4yYHKxVHj9X5LP4Hed7oyU9e7PCs",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_todo_url}}get_user_data",
+              "host": [
+                "{{base_todo_url}}get_user_data"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete_user",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTU2NTcwMSwianRpIjoiNDZjOWVhNDUtNzZiYy00MzQ3LTk3YTMtYjRiMTIxYmJlNGRkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzQxNTY1NzAxLCJjc3JmIjoiZWEwNzAwYjctNmJlZC00ZjE3LTkzOWQtZmJhZjFlMTE3ZTBkIiwiZXhwIjoxNzQxNTY2NjAxfQ.5wwxBwwMcyUsTBVPEn89CYyKKOqDS4MF-Fezc1jXlJA",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_pos_url}}delete_user",
+              "host": [
+                "{{base_pos_url}}delete_user"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Tasks",
+      "item": [
+        {
+          "name": "new_task",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NDYxMjM0MywianRpIjoiYjI0MDNjNzEtZjBkMS00MjY4LTgxM2QtYjBmZDdjZjViOGQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzc0NjEyMzQzLCJjc3JmIjoiYzgyMmFmZjEtNTBhZS00MWQzLTk3MzQtZmQwOGU0N2U3ZjU5IiwiZXhwIjoxNzc0NjEzMjQzfQ.fvn-mJdyRScxE5GFSJkuIHReGVk08e_n4o3ilRwkxbY",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "task 02",
+                  "type": "text",
+                  "uuid": "62a03c67-5fd9-4645-972c-bf979736ba95"
+                },
+                {
+                  "key": "description",
+                  "value": "task 02 desc",
+                  "type": "text",
+                  "uuid": "305c2daf-3df4-49c4-bccc-2732414e4788"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "uuid": "ed5c1076-d6b9-4ca1-8840-b5fdd0eceb6b",
+                  "src": "/C:/Users/Saber/Downloads/Mobile Transport App Design.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_todo_url}}new_task",
+              "host": [
+                "{{base_todo_url}}new_task"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update task",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3MjI3NTkxMSwianRpIjoiOGM3OThmM2QtMmQ5ZC00ZTY0LTk2NjUtODdjNTNkOTFiZjgzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzcyMjc1OTExLCJjc3JmIjoiN2Q4Y2FmYjEtMDk1My00NDgwLTlhMzctZGFjNDg4Y2IwYzY4IiwiZXhwIjoxNzcyMjc2ODExfQ.2yq1Fbx15By5eMEb2_muy5bdDCX2GPjUHJd5TzV2T20",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "task ",
+                  "type": "text",
+                  "uuid": "9fa5166e-825b-4c22-977c-4f1f2da3d08a"
+                },
+                {
+                  "key": "description",
+                  "value": ".",
+                  "type": "text",
+                  "uuid": "45b9ef14-3844-4532-8662-44c7d71332b2"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "uuid": "0e33fceb-ea66-441e-b117-785836f56abb",
+                  "src": "/C:/Users/pc/Downloads/dart (3).png",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_pos_url}}tasks/1",
+              "host": [
+                "{{base_pos_url}}tasks"
+              ],
+              "path": [
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{todo_access_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_todo_url}}tasks/3",
+              "host": [
+                "{{base_todo_url}}tasks"
+              ],
+              "path": [
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "my_tasks",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{todo_access_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_todo_url}}my_tasks",
+              "host": [
+                "{{base_todo_url}}my_tasks"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "todo_access_token",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}
