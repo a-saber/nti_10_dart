@@ -2,7 +2,30 @@ import 'package:dio/dio.dart';
   Dio dio = Dio();
 
 void main() async {
-  await getMyTasks(); 
+  await updateTask(); 
+}
+
+
+updateTask()async{
+  try{
+    var response = await dio.put(
+      'https://ntitodo-production-cddf.up.railway.app/api/tasks/51',
+      options: Options(
+        headers: {
+          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4ODUxODk5MCwianRpIjoiNzUwMmFkMGEtOWYxYS00M2NmLThmY2MtOTk5ODdlMTYyMWVjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzg4NTE4OTkwLCJjc3JmIjoiMzU0Yjc3Y2EtZjhiYy00YjAyLThjNTMtOTZiM2UyODQ0NjIzIiwiZXhwIjoxNzg4NTE5ODkwfQ.xbxMCay2EI4jjJtjLfV1gzep7b6TTrXpLPHFyDYK2m0'
+        }
+      ),
+      data: FormData.fromMap({
+        'title': 'updated title from dart ',
+        'description': 'updated description from dart',
+        
+      })
+    );
+    print(response.data.toString());
+  }
+  catch(e){
+    handleException(e);
+  }
 }
 
 getMyTasks()async{
