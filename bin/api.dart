@@ -61,6 +61,22 @@ register()async
     handleException(e);
    }
 }
+login()async
+{
+  try{
+    var response = await dio.post(
+      'https://ntitodo-production-cddf.up.railway.app/api/login',
+      data: FormData.fromMap({
+        'username': 'ahmed007',
+        'password': '123456',
+      })
+    );
+    print(response.data.toString());
+  }
+   catch(e){
+    handleException(e);
+   }
+}
 weather()async{
   
    try{

@@ -20,3 +20,19 @@ process02(){
 process03(){
   print('03');
 }
+
+/*
+
+{
+    "status": true,
+    "tasks": [
+        {
+            "created_at": "Fri, 04 Sep 2026 10:50:30 GMT",
+            "description": "task 01 desc",
+            "id": 50,
+            "image_path": "https://res.cloudinary.com/dot3oekpp/image/upload/v1788519030/todos/ujyy6pcqsxmpm0kgmwwh.jpg",
+            "title": "task 01"
+        }
+    ]
+}
+*/
